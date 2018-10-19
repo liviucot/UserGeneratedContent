@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Generated Content</title>
+    <!--------------- 1. CSS LINKS ---------------->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="msform">
+        <div class="top-elements">
+          <h1 id="mydfktitle">#MYDFK</h1>
+          <h1 id="tagphoto">Tag your photo on  <span class="fa fa-instagram" style="font-size: 20px;"></span> or <span class="fa fa-twitter" style="font-size: 20px;"></span> and it could appear here! </h1>
+          <button class="add-photo" onclick="newAlert.performCustomAlert()">ADD MY PHOTO</button> 
+        </div>
+        <br>
+        <div class="gallery row clearfix">
+          <div class="row">
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img1.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img2.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img3.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img4.png">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img5.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img6.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img7.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">  
+                <img src="images/img8.png">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img9.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img10.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img11.png">
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <img src="images/img12.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-upload">
+          <div id="dialogoverlay"></div>
+          <!--------------- SELECT MEDIA BOX ---------------->
+          <div id="dialogbox">
+            <!--------------- HEADER OF THE BOX ---------------->
+            <div class="pt-page pt-page-1 current" id="page1">
+              <div class="header">
+                <!--------------- CLOSE POPUP ---------------->
+                <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+                <div class="select-media">
+                  <i class="fa fa-camera" id="select-camera"></i>
+                  <h2 id="select-media">SELECT YOUR MEDIA</h2>
+                </div>
+              </div>
+              <!--------------- CONTENT OF THE BOX ---------------->
+              <div class="content-centre">
+                <!--------------- LEFT CONTENT ---------------->
+                <div id="content-leftside">
+                  <div class="tab">
+                    <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Desktop')"><span class="fa fa-desktop"></span>&nbsp; Desktop</button>
+                    <button class="tablinks" onclick="openTab(event, 'Facebook')"><span class="fa fa-facebook"></span>&nbsp; Facebook</button>
+                    <button class="tablinks" onclick="openTab(event, 'Instagram')"><span class="fa fa-instagram"></span>&nbsp; Instagram</button>
+                  </div>
+                  <div id="Desktop" class="tabcontent">
+                    <div id="drop-area">
+                      <form class="my-form">
+                        <span class="fa fa-cloud-upload" id="upload-button"></span>
+                        <p id="drag-text">Drag & Drop Your <br> Photos or Videos <br> To Upload</p>
+                        <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                        <label class="button" for="fileElem">or Select Files</label>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="Facebook" class="tabcontent">
+                    <p id="text-album">Choose album:</p>
+                    <select id="select-album">
+                      <option value="timeline">Timeline Photos</option>
+                      <option value="album">Another Album</option>
+                    </select>
+                  </div>
+                  <div id="Instagram" class="tabcontent">
+                    <h3>Instagram</h3>
+                  </div>
+                </div>
+                <!--------------- RIGHT CONTENT ---------------->
+                <div id="content-rightside">
+                  <!--------------- RIGHT TOPBAR ---------------->
+                  <div id="right-topbar">
+                    <h1>Selected Media</h1>
+                  </div>
+                  <progress id="progress-bar" max=100 value=0></progress>
+                  <div id="gallery" /></div>
+                </div>
+              </div>
+              <div class="footer">
+                <button class="btn" id="next">NEXT <i class="fa fa-arrow-right"></i></button>
+                <button class="btn" id="cancel-button" onclick="newAlert.ok()">CANCEL</button>
+              </div>
+            </div>
+            <div class="pt-page pt-page-2" id="page2">
+              <div class="header">
+                <!--------------- CLOSE POPUP ---------------->
+                <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+                <div class="select-media">
+                  <i class="fa fa-camera" id="select-camera"></i>
+                  <h2 id="select-media">REVIEW & SUBMIT YOUR MEDIA</h2>
+                </div>
+              </div>
+              <div class="content-centre">
+                <div class="review-image">
+                  <div id="image-box">
+                    <img src="images/img2.png">
+                    <button id="remove-image"><i class="fa fa-times"></i></button>
+                  </div>
+                  <div id="caption-box">
+                    <p>Caption:</p>
+                    <textarea id="caption-textarea"></textarea>
+                  </div>
+                </div>
+                <div class="details-box">
+                  <form class="form-inline" action="#">
+                    <label for="name">Display name:</label>
+                    <input type="name" id="name" placeholder="Enter name" name="name"></input>
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" placeholder="Enter email" name="email"></input>
+                    <label id="terms-label">
+                    <input type="checkbox" name="remember"> I agree to the Terms & Conditions </input><br>
+                    <input type="checkbox" name="remember"> I want to receive email updates from this brand</input>
+                    </label>
+                  </form>
+                </div>
+              </div>
+              <div class="footer">
+                <button class="btn" id="prev"><i class="fa fa-arrow-left"></i> BACK</button>
+                <button class="btn" id="next">SUBMIT</button>
+                <button class="btn" id="cancel-button" onclick="newAlert.ok()">CANCEL</button>
+              </div>
+            </div>
+            <div class="pt-page pt-page-3" id="page3">
+              <div class="header">
+                <!--------------- CLOSE POPUP ---------------->
+                <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+                <div class="select-media">
+                  <i class="fa fa-camera" id="select-camera"></i>
+                  <h2 id="select-media">YOUR MEDIA HAS BEEN SUBMITTED</h2>
+                </div>
+              </div>
+              <div class="content-centre">
+                <div id="sharing-text">
+                  <h2>Thanks for sharing!</h2>
+                  <p id="approval-text">Your photos are awaiting approval and will appear soon.</p>
+                  <button class="btn" id="more-photos-plus"><i class="fa fa-plus-circle"></i></button>
+                  <h1 id="add-more-photos">ADD MORE PHOTOS</h1>
+                </div>
+              </div>
+              <div class="footer">
+                <button class="btn" id="close" onclick="newAlert.ok()">CLOSE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--------------- 4. JAVASCRIPT LINKS ---------------->
+    <script type="text/javascript" src="js/upload.js"></script>
+    <script type="text/javascript" src="js/generaljs.js"></script>
+  </body>
+</html>
