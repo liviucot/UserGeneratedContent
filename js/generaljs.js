@@ -74,6 +74,26 @@ function CustomAlert() {
 
 var newAlert = new CustomAlert();
 
+// ------------- THIS IS FOR SHOWING THE MODAL ALONG WITH THE OVERLAY ---------------
+
+function imageAlert() {
+   this.performImageAlert = function (dialog) {
+      var windowWidth2 = window.innerWidth;
+      var windowHeight2 = window.innerHeight;
+      var galleryoverlay = document.getElementById('gallery-overlay');
+      var galleryDialogbox = document.getElementById('gallery-dialogbox');
+      galleryoverlay.style.display = "block";
+      galleryoverlay.style.height = windowHeight2 + "px";
+      galleryDialogbox.style.display = "block";
+   }
+   this.ok = function () {
+      document.getElementById('gallery-dialogbox').style.display = "none";
+      document.getElementById('gallery-overlay').style.display = "none";
+   }
+}
+
+var imageAlert = new imageAlert();
+
 // ------------- THIS IS FOR THE TABS FROM THE MODAL - DESKTOP/FACEBOOK/INSTAGRAM ---------------
 
 function openTab(evt, tabName) {

@@ -1,0 +1,38 @@
+#gallery-overlay {
+   display: none;
+   opacity: 0.5;
+   /*so that user can see through it*/
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   background: black;
+   z-index: 10;
+   height: 100%;
+   width: 100%;
+}
+
+#gallery-dialogbox {
+   display: none;
+   position: fixed;
+   background: #ffffff;
+   border-radius: 1px;
+   border: 0.5px solid #ccc;
+   z-index: 10;
+   left: 25%;
+   top: 20%;
+   width: 50%;
+   height: 400px;
+   -webkit-animation: fadeEffect 0.3s;
+   animation: fadeEffect 0.3s;
+}
+
+#close-popup {
+   float: right;
+   background-color: transparent;
+   color: #474747;
+   font-size: 15px;
+}
+
+#close-popup:hover {
+   color: #00a100;
+}

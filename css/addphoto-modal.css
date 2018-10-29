@@ -23,7 +23,7 @@
    left: 25%;
    top: 20%;
    width: 50%;
-   height: 400px;
+   max-height: 400px;
    -webkit-animation: fadeEffect 0.3s;
    animation: fadeEffect 0.3s;
 }
@@ -52,12 +52,32 @@
    margin-left: 11px;
 }
 
+#submitted{
+   text-align: center;
+   font-size: 16px;
+   color: #474747;
+   margin-top: 2%;
+   float: left;
+   font-weight: 550;
+   margin-left: 11px;
+}
+
+#submit-media{
+   text-align: center;
+   font-size: 16px;
+   color: #474747;
+   margin-top: 2%;
+   float: left;
+   font-weight: 550;
+   margin-left: 11px;
+}
+
 #select-camera {
    float: left;
    margin-top: 2%;
    margin-left: 3%;
    font-size: 22px;
-   color: #00a100;
+   color: #474747;
 }
 
 .header {
@@ -69,6 +89,11 @@
    left: 50%;
    /* top: calc(50% - 50px); */
    transform: translate(-50%, -50%);
+}
+
+.header:active{
+   background-color: black;
+   color: white;
 }
 
 .content-centre {
@@ -285,19 +310,23 @@
 }
 
 .button {
-   display: inline-block;
-   padding: 10px;
-   background: #00a100;
-   color: #fff;
-   cursor: pointer;
-   border-radius: 5px;
-   border: 1px solid #00a100;
+    display: inline-block;
+    padding: 14px;
+    background: transparent;
+    color: #00a100;
+    height: 41px;
+    font-size: 14px;
+    font-weight: 550;
+    padding-top: 8px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid #00a100;
 }
 
 .button:hover {
-   background: transparent;
+   background: #00a100;
    border: 2px solid #00a100;
-   color: #00a100;
+   color: #fff;
    transition: 0.2s;
 }
 
@@ -305,9 +334,13 @@
    display: none;
 }
 
+#fileElems {
+   display: none;
+}
+
 #upload-button {
-   font-size: 40px;
-   color: #00a100;
+   font-size: 42px;
+   color: #acacac;
 }
 
 #upload-button:hover {
@@ -323,9 +356,13 @@
 #drag-text {
    font-size: 15px;
    font-weight: 550;
-   color: #a0d3a0;
+   color: #acacac;
    margin-top: 4%;
    margin-bottom: 6%;
+}
+
+.mobile-upload-version{
+   display: none;
 }
 
 
@@ -343,8 +380,8 @@
    margin-right: 10px;
    margin-top: 7px;
    cursor: pointer;
-   border: 1px solid #00a100;
-   border-radius: 5px;
+   border: 2px solid #00a100;
+   border-radius: 50px;
 }
 
 #next:hover,
@@ -367,8 +404,8 @@
    margin-left: 2%;
    margin-top: 7px;
    cursor: pointer;
-   border: 1px solid #00a100;
-   border-radius: 5px;
+   border: 2px solid #00a100;
+   border-radius: 50px;
 }
 
 #prev:hover,
@@ -391,8 +428,8 @@
    margin-right: 10px;
    margin-top: 7px;
    cursor: pointer;
-   border: 1px solid #00a100;
-   border-radius: 5px;
+   border: 2px solid #00a100;
+   border-radius: 50px;
 }
 
 #close:hover,
@@ -415,8 +452,8 @@
    margin-right: 12px;
    margin-top: 7px;
    cursor: pointer;
-   border: 1px solid #fff;
-   border-radius: 5px;
+   border: 2px solid #fff;
+   border-radius: 50px;
 }
 
 #cancel-button:hover,

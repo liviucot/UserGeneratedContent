@@ -4,7 +4,7 @@
     <title>User Generated Content</title>
     <!--------------- 1. CSS LINKS ---------------->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/addphoto-modal.css">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -16,7 +16,7 @@
       <div id="msform">
         <div class="top-elements">
           <h1 id="mydfktitle">#MYDFK</h1>
-          <h1 id="tagphoto">Tag your photo on  <span class="fa fa-instagram" style="font-size: 20px;"></span> or <span class="fa fa-twitter" style="font-size: 20px;"></span> and it could appear here! </h1>
+          <h1 id="tagphoto">Tag your photo on  <span id="instagram-logo" class="fa fa-instagram""></span> or <span id="facebook-logo" class="fa fa-twitter"></span> and it could appear here! </h1>
           <button class="add-photo" onclick="newAlert.performCustomAlert()">ADD MY PHOTO</button> 
         </div>
         <br>
@@ -98,8 +98,8 @@
                 <!--------------- CLOSE POPUP ---------------->
                 <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
                 <div class="select-media">
-                  <i class="fa fa-camera" id="select-camera"></i>
-                  <h2 id="select-media">SELECT YOUR MEDIA</h2>
+                  <i class="fa fa-picture-o" id="select-camera"></i>
+                  <h2 id="select-media">Select Your Media</h2>
                 </div>
               </div>
               <!--------------- CONTENT OF THE BOX ---------------->
@@ -114,8 +114,16 @@
                   <div id="Desktop" class="tabcontent">
                     <div id="drop-area">
                       <form class="my-form">
-                        <span class="fa fa-cloud-upload" id="upload-button"></span>
+                        <!-- <span class="fa fa-cloud-upload" id="upload-button" onchange="handleFiles(this.files)"></span> -->
+                        <input type="file" id="fileElems" multiple accept="image/*" onchange="handleFiles(this.files)">
+                        <label for="fileElems" class="fa fa-cloud-upload" id="upload-button"></label>
                         <p id="drag-text">Drag & Drop Your <br> Photos or Videos <br> To Upload</p>
+                        <div class="mobile-upload-version">
+                          <div id="text-button-upload">
+                            <input type="file" id="fileElem2" multiple accept="image/*" onchange="handleFiles(this.files)">
+                            <label class="upload-files-button" for="fileElem2">UPLOAD FILES</label>
+                          </div>
+                        </div>
                         <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
                         <label class="button" for="fileElem">or Select Files</label>
                       </form>
@@ -136,7 +144,7 @@
                 <div id="content-rightside">
                   <!--------------- RIGHT TOPBAR ---------------->
                   <div id="right-topbar">
-                    <h1>Selected Media</h1>
+                    <h1 id="selectedMedText">Selected Media</h1>
                   </div>
                   <progress id="progress-bar" max=100 value=0></progress>
                   <div id="gallery" /></div>
@@ -152,8 +160,8 @@
                 <!--------------- CLOSE POPUP ---------------->
                 <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
                 <div class="select-media">
-                  <i class="fa fa-camera" id="select-camera"></i>
-                  <h2 id="select-media">REVIEW & SUBMIT YOUR MEDIA</h2>
+                  <i class="fa fa-picture-o" id="select-camera"></i>
+                  <h2 id="submit-media">Review & Submit Your Media</h2>
                 </div>
               </div>
               <div class="content-centre">
@@ -163,16 +171,17 @@
                     <button id="remove-image"><i class="fa fa-times"></i></button>
                   </div>
                   <div id="caption-box">
-                    <p>Caption:</p>
+                    <p id="caption-text">Caption:</p>
                     <textarea id="caption-textarea"></textarea>
                   </div>
-                </div>
+                </div>    
+
                 <div class="details-box">
                   <form class="form-inline" action="#">
                     <label for="name">Display name:</label>
-                    <input type="name" id="name" placeholder="Enter name" name="name"></input>
+                    <input type="name" id="name" name="name"></input>
                     <label for="email">Email address:</label>
-                    <input type="email" id="email" placeholder="Enter email" name="email"></input>
+                    <input type="email" id="email" name="email"></input>
                     <label id="terms-label">
                     <input type="checkbox" name="remember"> I agree to the Terms & Conditions </input><br>
                     <input type="checkbox" name="remember"> I want to receive email updates from this brand</input>
@@ -191,8 +200,8 @@
                 <!--------------- CLOSE POPUP ---------------->
                 <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
                 <div class="select-media">
-                  <i class="fa fa-camera" id="select-camera"></i>
-                  <h2 id="select-media">YOUR MEDIA HAS BEEN SUBMITTED</h2>
+                  <i class="fa fa-picture-o" id="select-camera"></i>
+                  <h2 id="submit-media">Your Media Has Been Submitted</h2>
                 </div>
               </div>
               <div class="content-centre">
@@ -209,10 +218,107 @@
             </div>
           </div>
         </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="close-button">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
+                </div>
+
+                <div class="container">
+                  <div class="modal-left">
+                    <img id="modal-image" class="img-responsive">
+                  </div>
+
+                  <div class="modal-right">
+                    <div class="products">
+                      <div class="first-product">
+                        <div id="product-number">
+                          <h id="rounded-number">1</h>
+                        </div>
+                        <div id="product-details">
+                          <a href=""></a><h4 class="modal-title" id="label-link">Nike Team Performance</h4>
+                          <h id="description">Volt Field Jacket</h>
+                          <br>
+                          <h4 class="modal-title" id="myModalLabel">Product Code: Youths 645904011 / Mens 645539011</h4>
+                        </div>
+
+                        <div id="product-image">
+                          <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                        </div>    
+                      </div>
+                      <div class="second-product">
+                        <div id="product-number">
+                          <h id="rounded-number">2</h>
+                        </div>
+                        <div id="product-details">
+                          <h4 class="modal-title" id="label-link">Nike Team Matchfit Care</h4>
+                          <h id="description">OTC Sock: University Blue/Midnight Navy</h>
+                          <br>
+                          <h4 class="modal-title" id="myModalLabel">Product Code: SX5730412</h4>
+                        </div>
+
+                        <div id="product-image">
+                          <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                        </div>      
+                      </div>
+
+                      <div class="third-product">
+                        <div id="product-number">
+                          <h id="rounded-number">3</h>
+                        </div>
+                        <div id="product-details">
+                          <h4 class="modal-title" id="label-link">Nike Libero</h4>
+                          <h id="description">Technical Knit Pant</h>
+                          <br>
+                          <h4 class="modal-title" id="myModalLabel">Product Code: Youths 588393 / Mens 588460</h4>
+                        </div>
+
+                        <div id="product-image">
+                          <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
+                        </div>      
+                      </div>
+
+                      <div class="fourth-product">
+                        <div id="product-number">
+                          <h id="rounded-number">4</h>
+                        </div>
+                        <div id="product-details">
+                          <h4 class="modal-title" id="label-link">Nike Park II Knit Short</h4>
+                          <h id="description">University Blue</h>
+                          <br>
+                          <h4 class="modal-title" id="myModalLabel">Product Code: Youths 725988412 / Mens 725887412</h4>
+                        </div>
+
+                        <div id="product-image">
+                          <img id="image-size" src="images/smallimage4.png" width="38px" height="49px">
+                        </div>      
+                      </div>
+
+                      <div class="fifth-product">
+                        <div id="product-number">
+                          <h id="rounded-number">5</h>
+                        </div>
+                        <div id="product-details">
+                          <h4 class="modal-title" id="label-link">Club Woolly Hat</h4>
+                          <h id="description">Heavyweight Knit</h>
+                        </div>
+
+                        <div id="product-image">
+                          <img id="image-size" src="images/smallimage5.png" width="38px" height="49px">
+                        </div>      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
       </div>
     </main>
     <!--------------- 4. JAVASCRIPT LINKS ---------------->
     <script type="text/javascript" src="js/upload.js"></script>
     <script type="text/javascript" src="js/generaljs.js"></script>
+    <script type="text/javascript" src="js/gallery-modal.js"></script>
   </body>
 </html>

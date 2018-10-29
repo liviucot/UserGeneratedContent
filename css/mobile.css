@@ -1,207 +1,609 @@
- @media only screen and (max-device-width: 640px) {
-
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-      #dialogbox {
-        left: 7%;
-        top: 30%;
-        width: 85%;
-        height: 620px;
-      }
-      #close-popup {
-        font-size: 40px;
-      }
-      #saved-text {
-        font-size: 40px;
-      }
-      #popup-description {
-        font-size: 26px;
-      }
-      .box-text {
-        height: 385px;
-      }
-      #tellworld-span {
-        font-size: 30px;
-      }
-      #share-text {
-        font-size: 22px;
-      }
-      #myTextarea {
-        height: 100px;
-        margin-top: 4%;
-      }
-      #share-header {
-        font-size: 18px;
-      }
-      .dialog-social {
-        margin-top: 4%;
-      }
-      #facebook-button,
-      #twitter-button,
-      #email-button {
-        font-size: 18px;
-        font-weight: 700;
-        height: 35px;
-        padding: 10px;
-      }
-    }
-
-    @media screen and (min-width: 641px) and (max-width: 960px) {
-      aside {
-        padding: 0 1rem 0 0;
-      }
-      .summary {
-        width: 28%;
-      }
-      .basket-labels {
-        display: none;
-      }
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 960px) {
-      main {
-        width: 100%;
-      }
-      .product-details {
-        padding: 0 1rem;
-      }
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-      #dialogbox {
-        left: 25%;
-        top: 30%;
-        width: 50%;
-        height: 405px;
-      }
-      #close-popup {
-        font-size: 40px;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-      #dialogbox {
-        left: 24%;
-        top: 20%;
-        width: 50%;
-        height: 405px;
-      }
-      #close-popup {
-        font-size: 25px;
-      }
-      #popup-description {
-        font-size: 12px;
-      }
-    }
+@media only screen and (max-device-width: 640px) {
 
 
-    /*--------------- 6. MEDIA FOR MAX-WIDTH: 1400px ----------------*/
+  #mydfktitle{
+    font-size: 50px;
+  }
 
-    @media screen and (min-width: 1400px) {
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-      #dialogbox {
-        left: 24%;
-        top: 23%;
-        width: 50%;
-        height: 405px;
-      }
-      #close-popup {
-        font-size: 25px;
-      }
-      #popup-description {
-        font-size: 12px;
-      }
-    }
+  #tagphoto{
+    font-size: 36px;
+  }
+
+  .add-photo{
+    font-size: 36px;
+    border-radius: 50px; 
+    width: 35%;
+    padding: 20px 13px;
+    margin-left: 33%;
+    margin-top: 2%;
+    margin-bottom: 2%;  
+  }
+
+  .column{
+    margin-left: 3.3%;
+    margin-bottom: 4%;
+  }
+
+  .column img{
+    width: 420px;
+    height: 380px;
+  }
+
+  .gallery-item{
+    width: 400px;
+    height: 352px;
+  }
+
+  #facebook-logo,
+  #instagram-logo{
+    font-size: 32px;
+  }
+
+  /*----------- GALLERY IMAGE DIALOG -------------*/
+
+  .modal-dialog{
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    margin-top: 0%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+
+  .modal{
+    margin: 0 auto 0px auto;
+  }
+
+  .close{
+    color: #414040;
+    font-size: 55px;
+    /* border-bottom: 1px solid #414040; */
+    margin-bottom: 2%;
+    margin-top: 2%;
+    float: right;
+    margin-right: 2.5%;
+  }
+
+  .container{
+    margin-top: 0%;
+  }
+
+  .modal-left{
+    width: 100%;
+    margin-bottom: 4%;
+  }
+
+  #modal-image{
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+
+  .modal-right{
+    width: 100%;
+    min-height: 100%;
+    overflow: scroll;
+    float: none;
+    display: inline-flex;
+    margin-left: 4%;
+    margin-top: 0%;
+    max-height: 100%;
+  }
+
+  #product-number{
+    margin-top: 1.3%;
+  }
+
+  #rounded-number{
+    padding: 7px 20px 7px 20px;
+    font-size: 35px;
+  }
+
+  .modal-title{
+    font-size: 30px;
+  }
+
+  #description{
+    font-size: 26px;
+  }
+
+  #product-image{
+    margin-top: 0%;
+    margin-left: 19px;
+    width: 24%;
+  }
+
+  #product-details{
+    width: 60%;
+  }
+
+  #image-size{
+    width: 45%;
+    height: 45%;
+  }
+
+  .products{
+    padding: 10px;
+  }
+
+  /*----------- ADD MY PHOTO MODAL --------------*/
+
+  #dialogbox{
+    position: absolute;
+    background: #ffffff;
+    left: -1.2%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: -1.7%;
+    width: 102.2%;
+    min-height: 104%;
+    max-height: 104%;
+  }
+
+  .header{
+    width: 100%;
+    height: 6%;
+    top: 0;
+    padding-bottom: 11%;
+    margin-top: 2%;
+    position: fixed;
+    border-bottom: 2px solid #ccc;
+    left: 0;
+    transform: none;
+  }
+
+  .footer{
+    width: 100%;
+    height: 7.5%;
+    padding-top: 0.2%;
+    left: 0%;
+    bottom: 0;
+    transform: none;
+    top: unset;
+    position: fixed;
+  }
+
+  #close-popup{
+    color: #414040;
+    font-size: 55px;
+    margin-bottom: 2%;
+    margin-top: 0.95%;
+    float: right;
+    margin-right: 1.5%;
+  }
+
+  #select-camera{
+    font-size: 55px;
+    margin-top: 1.8%;
+    margin-left: 3%;
+    color: #474747;
+  }
+
+  #select-media{
+    font-weight: 500;
+    font-size: 45px;
+    margin-left: 21.5%;
+    margin-top: 1.5%;
+  }
+
+  .content-centre{
+    width: 100%;
+    margin-top: 13%;
+  }
+
+  #content-leftside{
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .tab button{
+    padding: 30px 10px 30px 10px;
+    font-size: 34px;
+  }
+
+  .tabcontent{
+    padding: 20px 25px 20px 25px;
+  }
+
+  #drop-area{
+    padding: 12% 10px 24% 10px;
+  }
+
+  #content-rightside{
+    width: 100%;
+  }
+
+  #right-topbar{
+    padding: 50px 10px 60px 10px;
+    font-size: 36px;
+  }
+
+  #selectedMedText{
+    font-size: 36px;
+    margin-top: -1.8%;
+  }
+
+  #drag-text,
+  #fileElem,
+  #fileElem2,
+  .button{
+    display: none;
+  }
+
+  #text-button-upload,
+  .mobile-upload-version{
+    display: inherit;
+  }
+
+  #upload-button{
+    font-size: 140px;
+    color: #acacac;
+  }
+
+  .upload-files-button{
+    font-weight: 550;
+    height: 95px;
+    display: inherit;
+    width: 35%;
+    font-size: 32px;
+    float: left;
+    padding: 22px;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-top: 2%;
+    margin-left: 33%;
+    background: transparent;
+    color: #00a100;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 4px solid #00a100;
+  }
+
+  #cancel-button{
+    padding: 13px;
+    padding-left: 33px;
+    padding-right: 33px;
+    font-size: 36px;
+    font-weight: 500;
+    margin-right: 2%;
+    margin-top: 1.8%;
+    border: 4px solid #fff;
+    border-radius: 48.5px;
+  }
+
+  #next{
+    padding: 13px;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-top: 1.8%;
+    margin-right: 3%;
+    font-size: 36px;
+    font-weight: 500;
+    border: 4px solid #00a100;
+    border-radius: 48.5px;
+  }
+
+  #prev{
+    padding: 13px;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-top: 1.8%;
+    margin-right: 3%;
+    font-size: 36px;
+    font-weight: 500;
+    border: 4px solid #00a100;
+    border-radius: 48.5px;
+  }
+
+  #close{
+        padding: 13px;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-top: 1.8%;
+    margin-right: 3%;
+    font-size: 36px;
+    font-weight: 500;
+    border: 4px solid #00a100;
+    border-radius: 48.5px;
+  }
+
+  #gallery img{
+    width: 145px;
+    height: 140px;
+    margin-left: 2.5%;
+  }
+
+  .box textarea{
+    width: 66%;
+    height: 140px;
+    font-size: 30px;
+    margin-left: 3%;
+    border: 3px solid #bbb;
+    background-color: #fff;
+  }
+
+  #remove-button{
+    padding: 2px 14px 2px 14px;
+    font-size: 43px;
+    margin-top: 4%;
+    margin-right: 3%;
+  }
+
+  #gallery{
+    overflow: auto;
+    height: 85vh;
+  }
+
+  /*------------- SECTION 2---------------*/
+
+  #image-box img{
+    width: 28%;
+    height: 262px;
+    margin-left: 4.5%;
+    margin-top: 6%;
+    position: unset;
+  }
+
+  #remove-image{
+    font-size: 45px;
+    padding: 0px 8px 0px 8px;
+    margin-top: 4%;
+    margin-left: -30%;
+    position: unset;
+  }
+
+  #caption-box{
+    width: 63%;
+    margin-top: 3.8%;
+  }
+
+  #caption-text{
+    font-size: 36px;
+  }
+
+  #caption-textarea{
+    width: 97%;
+    height: 210px;
+    border:3px solid #ccc;
+    font-size: 32px;
+    margin-top: 2%;
+  }
+
+  .review-image{
+    min-height: 360px;
+    max-height: 1500px;
+    margin-left: 0%;
+  }
+
+  .details-box{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 13%;
+    margin-top: 9%;
+    position: fixed;
+  }
+
+  .form-inline{
+    display: inline-grid;
+    margin-top: 4%;
+    margin-left: 4%;
+    font-size: 36px;
+    width: 93%;
+  }
+
+  .form-inline input{
+    padding: 45px 10px 54px 29px;
+    margin:10px 30px 20px 0;
+  }
+
+  .form-inline input[type=checkbox]{
+    transform: scale(1.5);
+  }
+
+  #terms-label{
+    margin-left: 2%;
+  }
+
+  /*#submitted{
+    font-weight: 500;
+    font-size: 45px;
+    margin-left: 16.5%;
+    margin-top: -5.6%;
+  }*/
+
+  #submit-media{
+    font-weight: 500;
+    font-size: 45px;
+    margin-left: 10%;
+    margin-top: 1.5%;
+  }
+
+  #sharing-text{
+    width: 100%;
+    margin-top: 40%;
+    font-size: 36px;
+    color: #00a100;
+    position: fixed;
+    text-align: center;
+  }
+
+  #more-photos-plus{
+    font-size: 100px;
+    margin-top: 5%;
+    color: #00a100;
+    background: transparent;
+  }
+
+  #add-more-photos{
+    font-weight: 800;
+    font-size: 42px;
+    margin-top: 3%;
+  }
+
+  #approval-text{
+    font-size: 42px;
+  }
 
 
-    /*--------------- 7. MEDIA FOR MAX-WIDTH: 1600px ----------------*/
-
-    @media screen and (min-width: 1600px) {
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-      #dialogbox {
-        left: 25%;
-        top: 24%;
-        width: 48%;
-        height: 420px;
-      }
-      #close-popup {
-        font-size: 25px;
-      }
-      #popup-description {
-        font-size: 14px;
-      }
-      #share-text {
-        font-size: 14px;
-      }
-      #myTextarea {
-        height: 80px;
-        font-size: 14px;
-      }
-      #share-header {
-        font-size: 14px;
-      }
-    }
 
 
-    /*---------------- 8. MEDIA FOR MAX-WIDTH: 1900px --------------- */
 
-    @media screen and (min-width: 1900px) {
-      #dialogoverlay {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
-      #dialogbox {
-        left: 31%;
-        top: 28%;
-        width: 37%;
-        height: 450px;
-      }
-      #close-popup {
-        font-size: 25px;
-      }
-      #popup-description {
-        font-size: 16px;
-      }
-      .box-text {
-        height: 290px;
-      }
-      #share-text {
-        font-size: 16px;
-      }
-      #myTextarea {
-        height: 88px;
-        font-size: 16px;
-      }
-      #share-header {
-        font-size: 16px;
-      }
-    }
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  aside {
+    padding: 0 1rem 0 0;
+  }
+  .summary {
+    width: 28%;
+  }
+  .basket-labels {
+    display: none;
+  }
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  main {
+    width: 100%;
+  }
+  .product-details {
+    padding: 0 1rem;
+  }
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 25%;
+    top: 30%;
+    width: 50%;
+    height: 405px;
+  }
+  #close-popup {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 24%;
+    top: 20%;
+    width: 50%;
+    height: 405px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 12px;
+  }
+}
+
+
+/*--------------- 6. MEDIA FOR MAX-WIDTH: 1400px ----------------*/
+
+@media screen and (min-width: 1400px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 24%;
+    top: 23%;
+    width: 50%;
+    height: 405px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 12px;
+  }
+}
+
+
+/*--------------- 7. MEDIA FOR MAX-WIDTH: 1600px ----------------*/
+
+@media screen and (min-width: 1600px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 25%;
+    top: 24%;
+    width: 48%;
+    height: 420px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 14px;
+  }
+  #share-text {
+    font-size: 14px;
+  }
+  #myTextarea {
+    height: 80px;
+    font-size: 14px;
+  }
+  #share-header {
+    font-size: 14px;
+  }
+}
+
+
+/*---------------- 8. MEDIA FOR MAX-WIDTH: 1900px --------------- */
+
+@media screen and (min-width: 1900px) {
+  #dialogoverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #dialogbox {
+    left: 31%;
+    top: 28%;
+    width: 37%;
+    height: 450px;
+  }
+  #close-popup {
+    font-size: 25px;
+  }
+  #popup-description {
+    font-size: 16px;
+  }
+  .box-text {
+    height: 290px;
+  }
+  #share-text {
+    font-size: 16px;
+  }
+  #myTextarea {
+    height: 88px;
+    font-size: 16px;
+  }
+  #share-header {
+    font-size: 16px;
+  }
+}
