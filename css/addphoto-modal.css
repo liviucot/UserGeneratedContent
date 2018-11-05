@@ -1,4 +1,4 @@
-/*----------------- THIS IS THE CSS FOR THE MODAL ----------------------*/
+/*----------------- THIS IS THE CSS FOR ADD MY PHOTO MODAL ----------------------*/
 
 #dialogoverlay {
    display: none;
@@ -89,11 +89,6 @@
    left: 50%;
    /* top: calc(50% - 50px); */
    transform: translate(-50%, -50%);
-}
-
-.header:active{
-   background-color: black;
-   color: white;
 }
 
 .content-centre {

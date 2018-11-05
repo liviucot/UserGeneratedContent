@@ -17,6 +17,7 @@ $(document).ready(function () {
 
 });
 
+
 // ------------- THIS IS FOR MODAL - WHEN YOU CLICK NEXT/CANCEL/BACK BUTTON ---------------
 
 $(function () {
@@ -67,8 +68,10 @@ function CustomAlert() {
       dialogbox.style.display = "block";
    }
    this.ok = function () {
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogoverlay').style.display = "none";
+      var reloadbox = document.getElementById('dialogbox');
+      var reloadOverlay = document.getElementById('dialogoverlay');
+      reloadbox = window.location.reload();
+      reloadOverlay = window.location.reload();
    }
 }
 

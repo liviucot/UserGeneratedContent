@@ -1,3 +1,5 @@
+/*-------------- CSS GENERAL STYLE --------------*/
+
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
@@ -48,11 +50,41 @@ label {
   margin-bottom: 0.3125rem;
 }
 
-
-/*--------------- GENERAL STYLE -----------*/
-
-
 /*--------------- GALLERY STYLE -----------*/
+
+.dfk-header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  transform: translate(0%, 0%);
+  margin-bottom: -29px;
+}
+
+#headerS,
+#headerXL,
+#headerTablet,
+#headerLaptop,
+#headerL {
+  display: none;
+}
+
+.dfk-footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  transform: translate(0%, 0%);
+  margin-top: -25px;
+}
+
+#footerS,
+#footerTablet,
+#footerLaptop,
+#footerL,
+#footerXL{
+  display: none;
+}
 
 #msform {
   width: 100%;
@@ -98,11 +130,11 @@ label {
   box-sizing: border-box;
 }
 
-#instagram-logo{
+#instagram-logo {
   font-size: 20px;
 }
 
-#facebook-logo{
+#facebook-logo {
   font-size: 20px;
 }
 
@@ -127,6 +159,7 @@ label {
 .column img {
   width: 220px;
   height: 200px;
+  object-fit: cover;
 }
 
 
@@ -146,7 +179,7 @@ label {
 }
 
 .gallery-item img:hover {
-  opacity: 0.6;
+  opacity: 0.5;
   border: 3px solid #00a100;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -159,24 +192,21 @@ label {
 .modal-open {
   margin: 0 auto;
   overflow: auto;
-} 
+}
 
 #modal-image {
-    width: 100%;
-    max-height: 445px;
-    min-height: 445px;
-}  
+  width: 100%;
+  max-height: 445px;
+  min-height: 445px;
+  object-fit: cover;
+}
 
 .modal-image-caption {
   text-transform: capitalize;
 }
 
-.modal-dialog{
-  width: 65%;
-  margin: 17% auto;
-}
-
-.first-product,{
+.first-product,
+{
   width: 100%;
   float: left;
 }
@@ -184,37 +214,36 @@ label {
 .second-product,
 .third-product,
 .fourth-product,
-.fifth-product{
+.fifth-product {
   width: 100%;
   float: left;
   margin-top: 5%;
 }
 
-#product-number{
+#product-number {
   width: 13%;
   float: left;
   margin-top: 5%;
 }
 
-#product-details{
+#product-details {
   width: 62%;
   float: left;
 }
 
-#product-image{
+#product-image {
   width: 23%;
   float: right;
   margin-top: 2%;
-
 }
 
-#label-link:hover{
+#label-link:hover {
   color: #00a100;
   text-decoration: underline;
   font-weight: 800;
 }
 
-#rounded-number{
+#rounded-number {
   background-color: #ffef40;
   color: black;
   font-size: 16px;
@@ -222,6 +251,7 @@ label {
   border-radius: 50%;
   padding: 4px 10px;
 }
+
 .modal-open {
   overflow: hidden
 }
@@ -241,13 +271,13 @@ label {
 }
 
 .modal-dialog {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 8%;
-    width: 65%;
-    min-height: 445px;
-    max-height: 445px;
-    background-color: white;
+  position: relative;
+  margin: 0 auto 0 auto;
+  top: calc(50% - 300px);
+  width: 70%;
+  min-height: 445px;
+  max-height: 445px;
+  background-color: white;
 }
 
 .modal.fade .modal-dialog {
@@ -286,28 +316,26 @@ label {
   filter: alpha(opacity=50)
 }
 
-.container{
-      width: 100%;
-    margin-top: 8%;
+.container {
+  width: 100%;
+  margin-top: 8%;
 }
 
 .modal-left {
-        float: left;
-    width: 60%;
-    box-sizing: border-box;
+  float: left;
+  width: 60%;
+  box-sizing: border-box;
 }
 
 .modal-right {
-     
-    min-height: 400px;
-    width: 40%;
-    float: right;
-    margin-right: -15px;
-    margin-top: 1%;
-  
+  min-height: 400px;
+  width: 40%;
+  float: right;
+  margin-right: -15px;
+  margin-top: 1%;
 }
 
-.close{
+.close {
   background-color: white;
   color: #b8b8b8;
   margin-top: 0.5%;
@@ -316,22 +344,20 @@ label {
   margin-right: 1%;
 }
 
-.close:hover{
+.close:hover {
   background-color: white;
   color: #00a100;
   border-bottom: 1px solid #00a100;
-  
   transition: 0.3s ease;
 }
 
-
-#picture-description{
-  
-    width: 100%;
-    float: left;
-    margin-left: -80%;
-    margin-top: 17%;
+#picture-description {
+  width: 100%;
+  float: left;
+  margin-left: -80%;
+  margin-top: 17%;
 }
+
 .modal-footer {
   margin-top: 15px;
   padding: 19px 20px 20px;
@@ -352,26 +378,6 @@ label {
   margin-left: 0
 }
 
-/*@media (min-width:768px) {
-  .modal-dialog {
-    width: 600px;
-    margin: 30px auto
-  }
-  .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
-  }
-  .modal-sm {
-    width: 300px
-  }
-}*/
-
-/*@media (min-width:992px) {
-  .modal-lg {
-    width: 900px
-  }
-}*/
-
 .modal-footer:before,
 .modal-footer:after {
   content: " ";
@@ -387,8 +393,6 @@ label {
   -webkit-transition: opacity .15s linear;
   transition: opacity .15s linear
 }
-
-
 
 .img-responsive,
 .thumbnail>img,
