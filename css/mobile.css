@@ -1,4 +1,4 @@
-  /*------------ CODE FOR RESPONSIVE WEBSITE --------------*/
+/*------------ CODE FOR RESPONSIVE WEBSITE --------------*/
 
 
 /*  TABLE OF CONTENTS
@@ -18,15 +18,13 @@
 /*------------ 1. Media for Mobile MAX-DEVICE-WIDTH 640px--------------*/
 
 @media only screen and (max-device-width: 640px) {
-
-  #msform{
-    margin-left: 4%;
-  }
-
   #headerS {
-    width: 104%;
     margin-bottom: 1%;
+    top: 0;
     display: inherit;
+    left: 0;
+    width: 103%;
+    transform: translate(-0.6%, -6.5%);
   }
   #headerL,
   #headerXL,
@@ -34,11 +32,13 @@
   #headerLaptop {
     display: none;
   }
-
   #footerS {
-    width: 104%;
-    margin-bottom: 1%;
+    margin-top: 3%;
+    bottom: 0;
     display: inherit;
+    left: 0;
+    width: 103%;
+    transform: translate(-0.6%, 2.2%);
   }
   #footerL,
   #footerXL,
@@ -46,7 +46,13 @@
   #footerLaptop {
     display: none;
   }
-
+  .top-elements {
+    margin-left: 2%;
+    margin-top: -3%;
+  }
+  .gallery {
+    margin-left: 2%;
+  }
   #mydfktitle {
     font-size: 50px;
   }
@@ -69,6 +75,14 @@
   .column img {
     width: 420px;
     height: 380px;
+  }
+  .overlay {
+    width: 420px;
+    height: 380px;
+    margin-top: -39.8%;
+  }
+  .icon {
+    font-size: 60px;
   }
   .gallery-item {
     width: 400px;
@@ -150,9 +164,7 @@
   .products {
     padding: 10px;
   }
-
   /*----------- ADD MY PHOTO MODAL --------------*/
-  
   #dialogbox {
     position: absolute;
     background: #ffffff;
@@ -160,15 +172,16 @@
     overflow-x: hidden;
     overflow-y: auto;
     top: -1.7%;
-    width: 102.2%;
+    width: 106%;
     min-height: 104%;
     max-height: 104%;
   }
   .header {
     width: 100%;
-    height: 6%;
+    height: 5%;
     top: 0;
     padding-bottom: 11%;
+    margin-bottom: 30px;
     margin-top: 2%;
     position: fixed;
     border-bottom: 2px solid #ccc;
@@ -214,8 +227,8 @@
     margin-left: 0px;
   }
   .tab button {
-    padding: 30px 10px 30px 10px;
-    font-size: 34px;
+    padding: 55px 10px 38px 10px;
+    font-size: 41px;
   }
   .tabcontent {
     padding: 20px 25px 20px 25px;
@@ -231,8 +244,8 @@
     font-size: 36px;
   }
   #selectedMedText {
-    font-size: 36px;
-    margin-top: -1.8%;
+    font-size: 42px;
+    margin-top: -2%;
   }
   #drag-text,
   #fileElem,
@@ -430,11 +443,14 @@
   }
 }
 
+
 /*------------END OF 1. Media for Mobile MAX-DEVICE-WIDTH 640px--------------*/
 
+
 /*------------ 2. Media for MIN-DEVICE-WIDTH 768px and MAX-DEVICE-WIDTH 980px--------------*/
+
 @media (min-device-width: 768px) and (max-width: 980px) {
-  #msform{
+  #msform {
     margin-left: 1.5%;
     margin-top: 1%;
   }
@@ -469,6 +485,9 @@
   .summary {
     width: 28%;
   }
+  .gallery {
+    margin-left: 0%;
+  }
   .basket-labels {
     display: none;
   }
@@ -477,17 +496,20 @@
     width: 100%;
   }
   .modal-dialog {
-    width: 80%;
+    width: 84%;
+    margin-left: 7.5%;
+    top: calc(50% - 283px);
   }
   #select-album {
     margin-right: 38%;
   }
-
   #headerTablet {
-    width: 105%;
+    width: 106.2%;
     height: 100%;
     margin-bottom: 0.5%;
     display: inline-flex;
+    margin-left: -1.2%;
+    margin-top: -1.5%;
   }
   #headerS,
   #headerL,
@@ -495,14 +517,14 @@
   #headerXL {
     display: none;
   }
-
   #footerTablet {
-    width: 105%;
-    height: 100%;
+    width: 103.7%;
+    /* height: 100%; */
     margin-top: 0.5%;
     display: inline-flex;
+    margin-left: -1.2%;
+    position: absolute;
   }
-
   #footerS,
   #footerL,
   #footerLaptop,
@@ -510,19 +532,22 @@
     display: none;
   }
 }
+
+
 /*------------END OF 2. Media for MIN-DEVICE-WIDTH 768px and MAX-DEVICE-WIDTH 980px--------------*/
 
-/*------------ 3. Media for MAX-WIDTH 1199px and MIN-WIDTH 992px--------------*/
-@media (max-width: 1199px) and (min-width: 992px) {
 
-  #msform{
-    margin-left: 1.8%;
+/*------------ 3. Media for MAX-WIDTH 1199px and MIN-WIDTH 992px--------------*/
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  #msform {
+    margin-left: 8.8%;
     margin-top: 1.2%;
   }
-
   .modal-dialog {
-    width: 80%;
-    margin-left: 9%;
+    width: 70%;
+    margin-left: 13%;
+    top: calc(50% - 285px);
   }
   #dialogbox {
     left: 23%;
@@ -552,26 +577,29 @@
   #select-album {
     margin-right: 38%;
   }
+  .top-elements {
+    margin-left: 7%;
+  }
   #headerLaptop {
-    width: 106%;
+    width: 121%;
     height: 100%;
     margin-bottom: 0.5%;
     display: inline-flex;
+    margin-left: -5.5%;
+    margin-top: -1.4%;
   }
-  #headerL,
-  #headerXL,
+  #headerL #headerXL,
   #headerS,
   #headerTablet {
     display: none;
   }
-
   #footerLaptop {
-    width: 106%;
-    height: 100%;
-    margin-top: 0.5%;
+    width: 114%;
+    margin-top: 1.5%;
     display: inline-flex;
+    margin-left: -6.6%;
+    position: absolute;
   }
-
   #footerXL,
   #footerL,
   #footerTablet,
@@ -579,9 +607,13 @@
     display: none;
   }
 }
+
+
 /*------------END OF 3. Media for MAX-WIDTH 1199px and MIN-WIDTH 992px--------------*/
 
+
 /*------------ 4. Media for SCREEN and MAX-WIDTH 960px --------------*/
+
 @media screen and (max-width: 960px) {
   main {
     width: 100%;
@@ -610,39 +642,44 @@
   #select-album {
     margin-right: 38%;
   }
-
-   #headerLaptop {
-    width: 100%;
+  #headerLaptop {
+    width: 110%;
     height: 100%;
     margin-bottom: 0.5%;
     display: inline-flex;
+    margin-left: -2.6%;
+    margin-top: -1.4%;
   }
-  #headerL,
-  #headerXL {
+  #headerL #headerXL,
+  #headerS,
+  #headerTablet {
     display: none;
   }
-
   #footerLaptop {
-    width: 100%;
+    width: 110%;
     height: 100%;
-    margin-top: 0.5%;
+    margin-top: 1.5%;
     display: inline-flex;
+    margin-left: -2.6%;
   }
-
-  #footerS,
+  #footerXL,
   #footerL,
-  #footerXL {
-    display: none;
+  #footerTablet,
+  #footerS {
+    ` display: none;
   }
 }
+
+
 /*------------END OF 4. Media for SCREEN and MAX-WIDTH 960px --------------*/
 
+
 /*------------ 5. Media for SCREEN and MIN-WIDTH 1200px --------------*/
+
 @media screen and (min-width: 1200px) {
-  #msform{
+  #msform {
     margin-top: 2.2%;
   }
-
   #dialogoverlay {
     height: 100%;
     width: 100%;
@@ -685,23 +722,29 @@
   #select-album {
     margin-right: 50%;
   }
+  .top-elements {
+    margin-top: 1.1%;
+  }
   #headerL {
-    width: 100%;
+    width: 115.3%;
+    margin-top: -2%;
     height: 100%;
-    margin-bottom: 0.5%;
     display: inline-flex;
+    margin-left: -8%;
+    margin-bottom: 0%;
+    position: relative;
   }
   #headerXL {
     display: none;
   }
-
   #footerL {
-    width: 100%;
-    height: 100%;
-    margin-top: 0.5%;
+    width: 115.3%;
+    margin-top: 1%;
     display: inline-flex;
+    margin-left: -8%;
+    margin-bottom: 0%;
+    position: absolute;
   }
-
   #footerS,
   #footerTablet,
   #footerLaptop,
@@ -709,11 +752,13 @@
     display: none;
   }
 }
+
+
 /*------------END OF 5. Media for SCREEN and MIN-WIDTH 1200px --------------*/
 
 
-
 /*------------ 6. Media for SCREEN and MIN-WIDTH 1400px --------------*/
+
 @media screen and (min-width: 1400px) {
   #dialogoverlay {
     height: 100%;
@@ -737,7 +782,8 @@
   .modal-dialog {
     min-height: 480px;
     max-height: 480px;
-    width: 63%;
+    width: 60.5%;
+    margin-left: 19%;
   }
   #modal-image {
     max-height: 480px;
@@ -792,31 +838,34 @@
     margin-right: 50%;
   }
   #headerL {
-    width: 100%;
+    width: 123.5%;
     height: 100%;
-    margin-bottom: 0%;
+    margin-top: -1.7%;
     display: inline-flex;
+    margin-left: -11.2%;
   }
   #headerXL {
     display: none;
   }
-
   #footerL {
-    width: 100%;
-    height: 100%;
-    margin-top: 0.5%;
+    width: 123.5%;
+    /* height: 100%; */
+    margin-top: 0.8%;
     display: inline-flex;
+    margin-left: -12%;
+    position: absolute;
   }
-
   #footerXL {
     display: none;
   }
 }
+
+
 /*------------END OF 6. Media for SCREEN and MIN-WIDTH 1400px --------------*/
 
 
-
 /*------------ 7. Media for SCREEN and MIN-WIDTH 1600px --------------*/
+
 @media screen and (min-width: 1600px) {
   #dialogoverlay {
     height: 100%;
@@ -849,23 +898,36 @@
   .modal-dialog {
     width: 52%;
   }
-  #footerXL {
-    width: 100%;
+  #headerXL {
+    width: 162%;
     height: 100%;
-    margin-top: 0.5%;
+    margin-bottom: 0.5%;
     display: inline-flex;
+    margin-left: -17%;
+    margin-top: -1.5%;
   }
-
-  #footerL,
-  #footerLaptop{
+  #headerL {
+    display: none;
+  }
+  #footerXL {
+    width: 162%;
+    /* height: 100%; */
+    margin-top: 0.8%;
+    display: inline-flex;
+    margin-left: -12%;
+    position: absolute;
+  }
+  #footerL {
     display: none;
   }
 }
+
+
 /*------------END OF 7. Media for SCREEN and MIN-WIDTH 1600px --------------*/
 
 
-
 /*------------ 8. Media for SCREEN and MIN-WIDTH 1900px --------------*/
+
 @media screen and (min-width: 1900px) {
   #dialogoverlay {
     height: 100%;
@@ -903,28 +965,28 @@
     margin-left: 27%;
   }
   #headerXL {
-    width: 100%;
+    width: 162%;
     height: 100%;
     margin-bottom: 0.5%;
     display: inline-flex;
+    margin-left: -18.7%;
+    margin-top: -1.5%;
   }
   #headerL {
     display: none;
   }
-  main {
-  margin-left: 22.5%;
-  }
-
   #footerXL {
-  width: 100%;
-  height: 100%;
-  margin-top: 0.5%;
-  display: inline-flex;
+    width: 141.4%;
+    /* height: 100%; */
+    margin-top: 0.8%;
+    display: inline-flex;
+    margin-left: -21%;
+    position: absolute;
   }
-
-  #footerL,
-  #footerLaptop {
+  #footerL {
     display: none;
   }
 }
+
+
 /*------------ 8. Media for SCREEN and MIN-WIDTH 1900px --------------*/

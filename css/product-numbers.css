@@ -1,0 +1,600 @@
+/*--------------- PRODUCT NUMBERS ON THE PICTURE --------------*/
+
+/*------------- PRODUCT PICTURE 1 --------------*/
+#picture-number-1{
+  margin-left: 11%;
+  top: 0;
+  margin-top: 12%;
+  left: 0;
+  position: absolute;
+}
+
+#picture-number-2{
+  margin-left: 16%;
+  top: 0;
+  margin-top: 36%;
+  left: 0;
+  position: absolute;
+}
+
+#picture-number-3{
+  margin-left: 24%;
+  top: 0;
+  margin-top: 26%;
+  left: 0;
+  position: absolute;
+}
+
+#picture-number-4{
+  margin-left: 33%;
+  top: 0;
+  margin-top: 27%;
+  left: 0;
+  position: absolute;
+}
+
+#picture-number-5{
+  margin-left: 45%;
+  top: 0;
+  margin-top: 11%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 2 --------------*/
+#picture2-number-1{
+  margin-left: 17%;
+  top: 0;
+  margin-top: 18%;
+  left: 0;
+  position: absolute;
+}
+
+#picture2-number-2{
+  margin-left: 22%;
+  top: 0;
+  margin-top: 39%;
+  left: 0;
+  position: absolute;
+}
+
+#picture2-number-3{
+  margin-left: 51%;
+  top: 0;
+  margin-top: 18%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 3 --------------*/
+#picture3-number-1{
+  margin-left: 11%;
+  top: 0;
+  margin-top: 12%;
+  left: 0;
+  position: absolute;
+}
+
+#picture3-number-2{
+  margin-left: 16%;
+  top: 0;
+  margin-top: 36%;
+  left: 0;
+  position: absolute;
+}
+
+#picture3-number-3{
+  margin-left: 24%;
+  top: 0;
+  margin-top: 26%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 4 --------------*/
+#picture4-number-1{
+  margin-left: 38%;
+  top: 0;
+  margin-top: 18%;
+  left: 0;
+  position: absolute;
+}
+
+#picture4-number-2{
+  margin-left: 7%;
+  top: 0;
+  margin-top: 35%;
+  left: 0;
+  position: absolute;
+}
+
+#picture4-number-3{
+  margin-left: 9%;
+  top: 0;
+  margin-top: 10%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 5 --------------*/
+#picture5-number-1{
+  margin-left: 7%;
+  top: 0;
+  margin-top: 19%;
+  left: 0;
+  position: absolute;
+}
+
+#picture5-number-2{
+  margin-left: 49%;
+  top: 0;
+  margin-top: 35%;
+  left: 0;
+  position: absolute;
+}
+
+#picture5-number-3{
+  margin-left: 25%;
+  top: 0;
+  margin-top: 23%;
+  left: 0;
+  position: absolute;
+}
+
+#picture5-number-4{
+  margin-left: 6%;
+  top: 0;
+  margin-top: 30%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 6 --------------*/
+#picture6-number-1{
+  margin-left: 4%;
+  top: 0;
+  margin-top: 21%;
+  left: 0;
+  position: absolute;
+}
+
+#picture6-number-2{
+  margin-left: 45%;
+  top: 0;
+  margin-top: 34%;
+  left: 0;
+  position: absolute;
+}
+
+#picture6-number-3{
+  margin-left: 24%;
+  top: 0;
+  margin-top: 23%;
+  left: 0;
+  position: absolute;
+}
+
+#picture6-number-4{
+  margin-left: 45%;
+  margin-top: 43%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  }
+
+/*------------- PRODUCT PICTURE 7 --------------*/
+#picture7-number-1{
+  margin-left: 27%;
+  top: 0;
+  margin-top: 12%;
+  left: 0;
+  position: absolute;
+}
+
+#picture7-number-2{
+  margin-left: 44%;
+  top: 0;
+  margin-top: 26%;
+  left: 0;
+  position: absolute;
+}
+
+#picture7-number-3{
+  margin-left: 17%;
+  top: 0;
+  margin-top: 37%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 8 --------------*/
+#picture8-number-1{
+  margin-left: 7%;
+  top: 0;
+  margin-top: 23%;
+  left: 0;
+  position: absolute;
+}
+
+#picture8-number-2{
+  margin-left: 54%;
+  top: 0;
+  margin-top: 44%;
+  left: 0;
+  position: absolute;
+}
+
+#picture8-number-3{
+  margin-left: 26%;
+  top: 0;
+  margin-top: 22%;
+  left: 0;
+  position: absolute;
+}
+
+#picture8-number-4{
+  margin-left: 21%;
+  top: 0;
+  margin-top: 44%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 9 --------------*/
+#picture9-number-1{
+  margin-left: 13%;
+  top: 0;
+  margin-top: 12%;
+  left: 0;
+  position: absolute;
+}
+
+#picture9-number-2{
+  margin-left: 30%;
+  top: 0;
+  margin-top: 36%;
+  left: 0;
+  position: absolute;
+}
+
+#picture9-number-3{
+  margin-left: 41%;
+  top: 0;
+  margin-top: 5%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 10 --------------*/
+#picture10-number-1{
+  margin-left: 11%;
+  top: 0;
+  margin-top: 25%;
+  left: 0;
+  position: absolute;
+}
+
+#picture10-number-2{
+  margin-left: 44%;
+  top: 0;
+  margin-top: 43%;
+  left: 0;
+  position: absolute;
+}
+
+#picture10-number-3{
+  margin-left: 45%;
+  top: 0;
+  margin-top: 11%;
+  left: 0;
+  position: absolute;
+}
+
+#picture10-number-4{
+  margin-left: 51%;
+  top: 0;
+  margin-top: 29%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 11 --------------*/
+#picture11-number-1{
+  margin-left: 6%;
+  top: 0;
+  margin-top: 21%;
+  left: 0;
+  position: absolute;
+}
+
+#picture11-number-2{
+  margin-left: 54%;
+  top: 0;
+  margin-top: 43%;
+  left: 0;
+  position: absolute;
+}
+
+#picture11-number-3{
+  margin-left: 30%;
+  top: 0;
+  margin-top: 26%;
+  left: 0;
+  position: absolute;
+}
+
+#picture11-number-4{
+  margin-left: 39%;
+  top: 0;
+  margin-top: 18%;
+  left: 0;
+  position: absolute;
+}
+
+/*------------- PRODUCT PICTURE 12 --------------*/
+#picture12-number-1{
+  margin-left: 4%;
+  top: 0;
+  margin-top: 28%;
+  left: 0;
+  position: absolute;
+}
+
+#picture12-number-2{
+  margin-left: 18%;
+  top: 0;
+  margin-top: 42%;
+  left: 0;
+  position: absolute;
+}
+
+#picture12-number-3{
+  margin-left: 27%;
+  top: 0;
+  margin-top: 30%;
+  left: 0;
+  position: absolute;
+}
+
+#picture12-number-4{
+  margin-left: 44%;
+  top: 0;
+  margin-top: 44%;
+  left: 0;
+  position: absolute;
+}
+
+@media only screen and (max-device-width: 640px) {
+  #picture-number-1{
+    margin-left: 16%;
+    margin-top: 37%;
+  }
+
+  #picture-number-2{
+    margin-left: 27%;
+    margin-top: 76%;
+  }
+
+  #picture-number-3{
+    margin-left: 41%;
+    margin-top: 60%;
+  }
+  #picture-number-4{
+    margin-left: 55%;
+    margin-top: 62%;
+  }
+  #picture-number-5{
+    margin-left: 75%;
+    margin-top: 35%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 2 --------------*/
+  #picture2-number-1{
+    margin-left: 27%;
+    margin-top: 52%;
+  }
+
+  #picture2-number-2{
+    margin-left: 36%;
+    margin-top: 87%;
+  }
+
+  #picture2-number-3{
+    margin-left: 85%;
+    margin-top: 52%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 3 --------------*/
+  #picture3-number-1{
+    margin-left: 11%;
+    margin-top: 12%;
+  }
+
+  #picture3-number-2{
+    margin-left: 16%;
+    margin-top: 36%;
+  }
+
+  #picture3-number-3{
+    margin-left: 24%;
+    margin-top: 26%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 4 --------------*/
+  #picture4-number-1{
+    margin-left: 13%;
+    margin-top: 50%;
+  }
+
+  #picture4-number-2{
+    margin-left: 11%;
+    margin-top: 93%;
+  }
+
+  #picture4-number-3{
+    margin-left: 64%;
+    margin-top: 62%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 5 --------------*/
+  #picture5-number-1{
+    margin-left: 15%;
+    margin-top: 38%;
+  }
+
+  #picture5-number-2{
+    margin-left: 42%;
+    margin-top: 42%;
+  }
+
+  #picture5-number-3{
+    margin-left: 78%;
+    margin-top: 62%;
+  }
+
+  #picture5-number-4{
+    margin-left: 16%;
+    margin-top: 53%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 6 --------------*/
+  #picture6-number-1{
+    margin-left: 11%;
+    margin-top: 41%
+  }
+
+  #picture6-number-2{
+    margin-left: 70%;
+    margin-top: 58%;
+  }
+
+  #picture6-number-3{
+    margin-left: 41%;
+    margin-top: 43%;
+  }
+
+  #picture6-number-4{
+    margin-left: 45%;
+    margin-top: 43%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 7 --------------*/
+  #picture7-number-1{
+    margin-left: 44%;
+    margin-top: 51%;
+  }
+
+  #picture7-number-2{
+    margin-left: 71%;
+    margin-top: 77%;
+  }
+
+  #picture7-number-3{
+    margin-left: 30%;
+    margin-top: 93%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 8 --------------*/
+  #picture8-number-1{
+    margin-left: 16%;
+    margin-top: 43%;
+  }
+
+  #picture8-number-2{
+    margin-left: 86%;
+    margin-top: 73%;
+  }
+
+  #picture8-number-3{
+    margin-left: 45%;
+    margin-top: 41%;
+  }
+  #picture8-number-4{
+    margin-left: 36%;
+    margin-top: 72%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 9 --------------*/
+  #picture9-number-1{
+    margin-left: 23%;
+    margin-top: 53%
+  }
+
+  #picture9-number-2{
+    margin-left: 48%;
+    margin-top: 92%;
+  }
+
+  #picture9-number-3{
+    margin-left: 69%;
+    margin-top: 40%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 10 --------------*/
+  #picture10-number-1{
+    margin-left: 18%;
+    margin-top: 61%;
+  }
+
+  #picture10-number-2{
+    margin-left: 74%;
+    margin-top: 93%;
+
+  }
+
+  #picture10-number-3{
+    margin-left: 75%;
+    margin-top: 53%;
+  }
+
+  #picture10-number-4{
+    margin-left: 85%;
+    margin-top: 67%;
+  }
+
+
+
+  /*------------- MOBILE PRODUCT PICTURE 11 --------------*/
+  #picture11-number-1{
+    margin-left: 15%;
+    margin-top: 40%;
+  }
+
+  #picture11-number-2{
+    margin-left: 49%;
+    margin-top: 48%;
+  }
+
+  #picture11-number-3{
+    margin-left: 85%;
+    margin-top: 74%;
+  }
+
+  #picture11-number-4{
+    margin-left: 64%;
+    margin-top: 38%;
+  }
+
+  /*------------- MOBILE PRODUCT PICTURE 12 --------------*/
+  #picture12-number-1{
+    margin-left: 13%;
+    margin-top: 48%;
+  }
+
+  #picture12-number-2{
+    margin-left: 33%;
+    margin-top: 67%;
+  }
+
+  #picture12-number-3{
+    margin-left: 46%;
+    margin-top: 52%;
+  }
+
+  #picture12-number-4{
+    margin-left: 69%;
+    margin-top: 71%;
+  }
+
+
+}

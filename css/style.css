@@ -2,6 +2,7 @@
 
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url(https://use.fontawesome.com/releases/v5.4.1/css/all.css);
 
 /*basic reset*/
 
@@ -50,16 +51,12 @@ label {
   margin-bottom: 0.3125rem;
 }
 
-/*--------------- GALLERY STYLE -----------*/
-
-.dfk-header {
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: relative;
-  transform: translate(0%, 0%);
-  margin-bottom: -29px;
+.gallery {
+  margin-left: -1.5%;
 }
+
+
+/*--------------- GALLERY STYLE -----------*/
 
 #headerS,
 #headerXL,
@@ -69,20 +66,11 @@ label {
   display: none;
 }
 
-.dfk-footer {
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  position: relative;
-  transform: translate(0%, 0%);
-  margin-top: -25px;
-}
-
 #footerS,
 #footerTablet,
 #footerLaptop,
 #footerL,
-#footerXL{
+#footerXL {
   display: none;
 }
 
@@ -178,12 +166,55 @@ label {
   padding: 0px;
 }
 
-.gallery-item img:hover {
-  opacity: 0.5;
-  border: 3px solid #00a100;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+
+/*.gallery-item img:hover{
+  background-color: black;
+  opacity: 0.8;
+}*/
+
+.demo {
+  display: block;
 }
+
+.overlay {
+  position: absolute;
+  opacity: 0;
+  width: 220px;
+  height: 200px;
+  float: left;
+  margin-left: 0%;
+  margin-top: -20.9%;
+  transition: .3s ease;
+  background-color: #00000073;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.icon {
+  color: white;
+  font-size: 30px;
+  margin-left: 44%;
+  position: absolute;
+  text-align: center;
+  margin-top: 34%;
+}
+
+.fa-user:hover {
+  color: #eee;
+}
+
+
+/*.overlay:hover{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+  transition: .5s ease;
+}
+*/
 
 .modal {
   margin: 0 auto 28px auto;
@@ -347,7 +378,6 @@ label {
 .close:hover {
   background-color: white;
   color: #00a100;
-  border-bottom: 1px solid #00a100;
   transition: 0.3s ease;
 }
 

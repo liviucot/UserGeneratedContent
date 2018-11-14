@@ -6,350 +6,1259 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/addphoto-modal.css">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/product-numbers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
   </head>
   <body>
-    <div class="dfk-header">
-      <div id="headerS">
-        <img src="images/headerS.png" id="headerS">
-      </div>
-      <div id="headerTablet">
-        <img src="images/headerTablet.png" id="headerTablet">
-      </div>
-      <div id="headerLaptop">
-        <img src="images/headerLaptop.png" id="headerLaptop">
-      </div>
-      <div id="headerL">
-        <img src="images/headerL.png" id="headerL">
-      </div>
-      <div id="headerXL">
-        <img src="images/headerXL.png" id="headerXL">
-      </div>
-    </div>
     <main>
       <div id="msform">
-        <div class="top-elements">
-          <h1 id="mydfktitle">#MYDFK</h1>
-          <h1 id="tagphoto">Tag your photo on  <span id="instagram-logo" class="fa fa-instagram""></span> or <span id="facebook-logo" class="fa fa-twitter"></span> and it could appear here! </h1>
-          <button class="add-photo" onclick="newAlert.performCustomAlert()">ADD MY PHOTO</button> 
+      <!-------------- HEADER IMAGES ----------------->
+      <div class="dfk-header">
+        <div id="headerS">
+          <img src="images/headerS.png" id="headerS">
         </div>
-        <br>
-        <div class="gallery row clearfix">
-          <div class="row">
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img1.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img2.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img3.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img4.png">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img5.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img6.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img7.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">  
-                <img src="images/img8.png">
+        <div id="headerTablet">
+          <img src="images/headerTablet.png" id="headerTablet">
+        </div>
+        <div id="headerLaptop">
+          <img src="images/headerLaptop.png" id="headerLaptop">
+        </div>
+        <div id="headerL">
+          <img src="images/headerL.png" id="headerL">
+        </div>
+        <div id="headerXL">
+          <img src="images/headerXL.png" id="headerXL">
+        </div>
+      </div>
+      <div class="top-elements">
+        <h1 id="mydfktitle">#MYDFK</h1>
+        <h1 id="tagphoto">Tag your photo on  <span id="instagram-logo" class="fa fa-instagram""></span> or <span id="facebook-logo" class="fa fa-twitter"></span> and it could appear here! </h1>
+        <button class="add-photo" onclick="newAlert.performCustomAlert()">ADD MY PHOTO</button> 
+      </div>
+      <br>
+      <div class="gallery row clearfix">
+        <div class="row">
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img1.png" onclick="openModal();currentSlide(1)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(1)">
+                <a onclick="openModal();currentSlide(1)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img9.png">
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img2.png" onclick="openModal();currentSlide(2)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(2)">
+                <a onclick="openModal();currentSlide(2)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
               </div>
             </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img10.png">
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img3.png" onclick="openModal();currentSlide(3)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(3)">
+                <a onclick="openModal();currentSlide(3)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
               </div>
             </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img11.png">
-              </div>
-            </div>
-            <div class="column">
-              <div class="gallery-item">
-                <img src="images/img12.png">
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img4.png" onclick="openModal();currentSlide(4)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(4)">
+                <a onclick="openModal();currentSlide(4)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="popup-upload">
-          <div id="dialogoverlay"></div>
-          <!--------------- SELECT MEDIA BOX ---------------->
-          <div id="dialogbox">
-            <!--------------- HEADER OF THE BOX ---------------->
-            <div class="pt-page pt-page-1 current" id="page1">
-              <div class="header">
-                <!--------------- CLOSE POPUP ---------------->
-                <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
-                <div class="select-media">
-                  <i class="fa fa-picture-o" id="select-camera"></i>
-                  <h2 id="select-media">Select Your Media</h2>
+        <div class="row">
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img5.png" onclick="openModal();currentSlide(5)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(5)">
+                <a onclick="openModal();currentSlide(5)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img6.png" onclick="openModal();currentSlide(6)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(6)">
+                <a onclick="openModal();currentSlide(6)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img7.png" onclick="openModal();currentSlide(7)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(7)">
+                <a onclick="openModal();currentSlide(7)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img8.png" onclick="openModal();currentSlide(8)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(8)">
+                <a onclick="openModal();currentSlide(8)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img9.png" onclick="openModal();currentSlide(9)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(9)">
+                <a onclick="openModal();currentSlide(9)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img10.png" onclick="openModal();currentSlide(10)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(10)">
+                <a onclick="openModal();currentSlide(10)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img11.png" onclick="openModal();currentSlide(11)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(11)">
+                <a onclick="openModal();currentSlide(11)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img src="images/img12.png" onclick="openModal();currentSlide(12)" id="gallery-image" class="demo">
+              <div class="overlay" onclick="openModal();currentSlide(12)">
+                <a onclick="openModal();currentSlide(12)" class="icon" title="User Profile">
+                <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-upload">
+        <div id="dialogoverlay" onclick="newAlert.ok()"></div>
+        <!--------------- SELECT MEDIA BOX ---------------->
+        <div id="dialogbox">
+          <!--------------- HEADER OF THE BOX ---------------->
+          <div class="pt-page pt-page-1 current" id="page1">
+            <div class="header">
+              <!--------------- CLOSE POPUP ---------------->
+              <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+              <div class="select-media">
+                <i class="fa fa-picture-o" id="select-camera"></i>
+                <h2 id="select-media">Select Your Media</h2>
+              </div>
+            </div>
+            <!--------------- CONTENT OF THE BOX ---------------->
+            <div class="content-centre">
+              <!--------------- LEFT CONTENT ---------------->
+              <div id="content-leftside">
+                <div class="tab">
+                  <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Desktop')"><span class="fa fa-desktop"></span>&nbsp; Desktop</button>
+                  <button class="tablinks" onclick="openTab(event, 'Facebook')"><span class="fa fa-facebook"></span>&nbsp; Facebook</button>
+                  <button class="tablinks" onclick="openTab(event, 'Instagram')"><span class="fa fa-instagram"></span>&nbsp; Instagram</button>
+                </div>
+                <div id="Desktop" class="tabcontent">
+                  <div id="drop-area">
+                    <form class="my-form">
+                      <!-- <span class="fa fa-cloud-upload" id="upload-button" onchange="handleFiles(this.files)"></span> -->
+                      <input type="file" id="fileElems" multiple accept="image/*" onchange="handleFiles(this.files)">
+                      <label for="fileElems" class="fa fa-cloud-upload" id="upload-button"></label>
+                      <p id="drag-text">Drag & Drop Your <br> Photos or Videos <br> To Upload</p>
+                      <div class="mobile-upload-version">
+                        <div id="text-button-upload">
+                          <input type="file" id="fileElem2" multiple accept="image/*" onchange="handleFiles(this.files)">
+                          <label class="upload-files-button" for="fileElem2">UPLOAD FILES</label>
+                        </div>
+                      </div>
+                      <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                      <label class="button" for="fileElem">or Select Files</label>
+                    </form>
+                  </div>
+                </div>
+                <div id="Facebook" class="tabcontent">
+                  <p id="text-album">Choose album:</p>
+                  <select id="select-album">
+                    <option value="timeline">Timeline Photos</option>
+                    <option value="album">Another Album</option>
+                  </select>
+                </div>
+                <div id="Instagram" class="tabcontent">
+                  <h3>Instagram</h3>
                 </div>
               </div>
-              <!--------------- CONTENT OF THE BOX ---------------->
-              <div class="content-centre">
-                <!--------------- LEFT CONTENT ---------------->
-                <div id="content-leftside">
-                  <div class="tab">
-                    <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Desktop')"><span class="fa fa-desktop"></span>&nbsp; Desktop</button>
-                    <button class="tablinks" onclick="openTab(event, 'Facebook')"><span class="fa fa-facebook"></span>&nbsp; Facebook</button>
-                    <button class="tablinks" onclick="openTab(event, 'Instagram')"><span class="fa fa-instagram"></span>&nbsp; Instagram</button>
-                  </div>
-                  <div id="Desktop" class="tabcontent">
-                    <div id="drop-area">
-                      <form class="my-form">
-                        <!-- <span class="fa fa-cloud-upload" id="upload-button" onchange="handleFiles(this.files)"></span> -->
-                        <input type="file" id="fileElems" multiple accept="image/*" onchange="handleFiles(this.files)">
-                        <label for="fileElems" class="fa fa-cloud-upload" id="upload-button"></label>
-                        <p id="drag-text">Drag & Drop Your <br> Photos or Videos <br> To Upload</p>
-                        <div class="mobile-upload-version">
-                          <div id="text-button-upload">
-                            <input type="file" id="fileElem2" multiple accept="image/*" onchange="handleFiles(this.files)">
-                            <label class="upload-files-button" for="fileElem2">UPLOAD FILES</label>
-                          </div>
-                        </div>
-                        <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-                        <label class="button" for="fileElem">or Select Files</label>
-                      </form>
+              <!--------------- RIGHT CONTENT ---------------->
+              <div id="content-rightside">
+                <!--------------- RIGHT TOPBAR ---------------->
+                <div id="right-topbar">
+                  <h1 id="selectedMedText">Selected Media</h1>
+                </div>
+                <progress id="progress-bar" max=100 value=0></progress>
+                <div id="gallery" /></div>
+              </div>
+            </div>
+            <div class="footer">
+              <button class="btn" id="next">NEXT <i class="fa fa-arrow-right"></i></button>
+              <button class="btn" id="cancel-button" onclick="newAlert.ok()">CANCEL</button>
+            </div>
+          </div>
+          <div class="pt-page pt-page-2" id="page2">
+            <div class="header">
+              <!--------------- CLOSE POPUP ---------------->
+              <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+              <div class="select-media">
+                <i class="fa fa-picture-o" id="select-camera"></i>
+                <h2 id="submit-media">Review & Submit Your Media</h2>
+              </div>
+            </div>
+            <div class="content-centre">
+              <div class="review-image">
+                <div id="image-box">
+                  <img src="images/img2.png">
+                  <button id="remove-image"><i class="fa fa-times"></i></button>
+                </div>
+                <div id="caption-box">
+                  <p id="caption-text">Caption:</p>
+                  <textarea id="caption-textarea"></textarea>
+                </div>
+              </div>
+              <div class="details-box">
+                <form class="form-inline" action="#">
+                  <label for="name">Display name:</label>
+                  <input type="name" id="name" name="name"></input>
+                  <label for="email">Email address:</label>
+                  <input type="email" id="email" name="email"></input>
+                  <label id="terms-label">
+                  <input type="checkbox" name="remember"> I agree to the Terms & Conditions </input><br>
+                  <input type="checkbox" name="remember"> I want to receive email updates from this brand</input>
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div class="footer">
+              <button class="btn" id="prev"><i class="fa fa-arrow-left"></i> BACK</button>
+              <button class="btn" id="next">SUBMIT</button>
+              <button class="btn" id="cancel-button" onclick="newAlert.ok()">CANCEL</button>
+            </div>
+          </div>
+          <div class="pt-page pt-page-3" id="page3">
+            <div class="header">
+              <!--------------- CLOSE POPUP ---------------->
+              <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
+              <div class="select-media">
+                <i class="fa fa-picture-o" id="select-camera"></i>
+                <h2 id="submit-media">Your Media Has Been Submitted</h2>
+              </div>
+            </div>
+            <div class="content-centre">
+              <div id="sharing-text">
+                <h2>Thanks for sharing!</h2>
+                <p id="approval-text">Your photos are awaiting approval and will appear soon.</p>
+                <button class="btn" id="more-photos-plus"><i class="fa fa-plus-circle"></i></button>
+                <h1 id="add-more-photos">ADD MORE PHOTOS</h1>
+              </div>
+            </div>
+            <div class="footer">
+              <button class="btn" id="close" onclick="newAlert.ok()">CLOSE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div id="close-button">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="container">
+              <!-------------- FIRST IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/football.png" id="modal-image">
+                  <div class="picture-numbers">
+                    <div id="picture-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                    <div id="picture-number-5">
+                      <h id="rounded-number">5</h>
                     </div>
                   </div>
-                  <div id="Facebook" class="tabcontent">
-                    <p id="text-album">Choose album:</p>
-                    <select id="select-album">
-                      <option value="timeline">Timeline Photos</option>
-                      <option value="album">Another Album</option>
-                    </select>
-                  </div>
-                  <div id="Instagram" class="tabcontent">
-                    <h3>Instagram</h3>
-                  </div>
                 </div>
-                <!--------------- RIGHT CONTENT ---------------->
-                <div id="content-rightside">
-                  <!--------------- RIGHT TOPBAR ---------------->
-                  <div id="right-topbar">
-                    <h1 id="selectedMedText">Selected Media</h1>
-                  </div>
-                  <progress id="progress-bar" max=100 value=0></progress>
-                  <div id="gallery" /></div>
-                </div>
-              </div>
-              <div class="footer">
-                <button class="btn" id="next">NEXT <i class="fa fa-arrow-right"></i></button>
-                <button class="btn" id="cancel-button" onclick="newAlert.ok()">CANCEL</button>
-              </div>
-            </div>
-            <div class="pt-page pt-page-2" id="page2">
-              <div class="header">
-                <!--------------- CLOSE POPUP ---------------->
-                <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
-                <div class="select-media">
-                  <i class="fa fa-picture-o" id="select-camera"></i>
-                  <h2 id="submit-media">Review & Submit Your Media</h2>
-                </div>
-              </div>
-              <div class="content-centre">
-                <div class="review-image">
-                  <div id="image-box">
-                    <img src="images/img2.png">
-                    <button id="remove-image"><i class="fa fa-times"></i></button>
-                  </div>
-                  <div id="caption-box">
-                    <p id="caption-text">Caption:</p>
-                    <textarea id="caption-textarea"></textarea>
-                  </div>
-                </div>    
-
-                <div class="details-box">
-                  <form class="form-inline" action="#">
-                    <label for="name">Display name:</label>
-                    <input type="name" id="name" name="name"></input>
-                    <label for="email">Email address:</label>
-                    <input type="email" id="email" name="email"></input>
-                    <label id="terms-label">
-                    <input type="checkbox" name="remember"> I agree to the Terms & Conditions </input><br>
-                    <input type="checkbox" name="remember"> I want to receive email updates from this brand</input>
-                    </label>
-                  </form>
-                </div>
-              </div>
-              <div class="footer">
-                <button class="btn" id="prev"><i class="fa fa-arrow-left"></i> BACK</button>
-                <button class="btn" id="next">SUBMIT</button>
-                <button class="btn" id="cancel-button" onclick="newAlert.ok()">CANCEL</button>
-              </div>
-            </div>
-            <div class="pt-page pt-page-3" id="page3">
-              <div class="header">
-                <!--------------- CLOSE POPUP ---------------->
-                <button id="close-popup" onclick="newAlert.ok()"><i class="fa fa-times" style="margin-top: 8px; margin-right: 7px;"></i></button>
-                <div class="select-media">
-                  <i class="fa fa-picture-o" id="select-camera"></i>
-                  <h2 id="submit-media">Your Media Has Been Submitted</h2>
-                </div>
-              </div>
-              <div class="content-centre">
-                <div id="sharing-text">
-                  <h2>Thanks for sharing!</h2>
-                  <p id="approval-text">Your photos are awaiting approval and will appear soon.</p>
-                  <button class="btn" id="more-photos-plus"><i class="fa fa-plus-circle"></i></button>
-                  <h1 id="add-more-photos">ADD MORE PHOTOS</h1>
-                </div>
-              </div>
-              <div class="footer">
-                <button class="btn" id="close" onclick="newAlert.ok()">CLOSE</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-                <div id="close-button">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i></button>
-                </div>
-
-                <div class="container">
-                  <div class="modal-left">
-                    <img id="modal-image" class="img-responsive">
-                  </div>
-
-                  <div class="modal-right">
-                    <div class="products">
-                      <div class="first-product">
-                        <div id="product-number">
-                          <h id="rounded-number">1</h>
-                        </div>
-                        <div id="product-details">
-                          <a href=""></a><h4 class="modal-title" id="label-link">Nike Team Performance</h4>
-                          <h id="description">Volt Field Jacket</h>
-                          <br>
-                          <h4 class="modal-title" id="myModalLabel">Product Code: Youths 645904011 / Mens 645539011</h4>
-                        </div>
-
-                        <div id="product-image">
-                          <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
-                        </div>    
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
                       </div>
-                      <div class="second-product">
-                        <div id="product-number">
-                          <h id="rounded-number">2</h>
-                        </div>
-                        <div id="product-details">
-                          <h4 class="modal-title" id="label-link">Nike Team Matchfit Care</h4>
-                          <h id="description">OTC Sock: University Blue/Midnight Navy</h>
-                          <br>
-                          <h4 class="modal-title" id="myModalLabel">Product Code: SX5730412</h4>
-                        </div>
-
-                        <div id="product-image">
-                          <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
-                        </div>      
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Nike Team Performance</h4>
+                        <h id="description">Volt Field Jacket</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: Youths 645904011 / Mens 645539011</h4>
                       </div>
-
-                      <div class="third-product">
-                        <div id="product-number">
-                          <h id="rounded-number">3</h>
-                        </div>
-                        <div id="product-details">
-                          <h4 class="modal-title" id="label-link">Nike Libero</h4>
-                          <h id="description">Technical Knit Pant</h>
-                          <br>
-                          <h4 class="modal-title" id="myModalLabel">Product Code: Youths 588393 / Mens 588460</h4>
-                        </div>
-
-                        <div id="product-image">
-                          <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
-                        </div>      
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
                       </div>
-
-                      <div class="fourth-product">
-                        <div id="product-number">
-                          <h id="rounded-number">4</h>
-                        </div>
-                        <div id="product-details">
-                          <h4 class="modal-title" id="label-link">Nike Park II Knit Short</h4>
-                          <h id="description">University Blue</h>
-                          <br>
-                          <h4 class="modal-title" id="myModalLabel">Product Code: Youths 725988412 / Mens 725887412</h4>
-                        </div>
-
-                        <div id="product-image">
-                          <img id="image-size" src="images/smallimage4.png" width="38px" height="49px">
-                        </div>      
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
                       </div>
-
-                      <div class="fifth-product">
-                        <div id="product-number">
-                          <h id="rounded-number">5</h>
-                        </div>
-                        <div id="product-details">
-                          <h4 class="modal-title" id="label-link">Club Woolly Hat</h4>
-                          <h id="description">Heavyweight Knit</h>
-                        </div>
-
-                        <div id="product-image">
-                          <img id="image-size" src="images/smallimage5.png" width="38px" height="49px">
-                        </div>      
+                      <div id="product-details">
+                        <h4 class="modal-title" id="label-link">Nike Team Matchfit Care</h4>
+                        <h id="description">OTC Sock: University Blue/Midnight Navy</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: SX5730412</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <h4 class="modal-title" id="label-link">Nike Libero</h4>
+                        <h id="description">Technical Knit Pant</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: Youths 588393 / Mens 588460</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <h4 class="modal-title" id="label-link">Nike Park II Knit Short</h4>
+                        <h id="description">University Blue</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: Youths 725988412 / Mens 725887412</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage4.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fifth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">5</h>
+                      </div>
+                      <div id="product-details">
+                        <h4 class="modal-title" id="label-link">Club Woolly Hat</h4>
+                        <h id="description">Heavyweight Knit</h>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage5.png" width="38px" height="49px">
                       </div>
                     </div>
                   </div>
                 </div>
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
+              </div>
+              <!-------------- SECOND IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img2.png" id="modal-image">
+                  <div class="picture2-numbers">
+                    <div id="picture2-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture2-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture2-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Nike Football</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Nike Football 2</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Nike Football 3</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- THIRD IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img3.png" id="modal-image">
+                  <div class="picture2-numbers">
+                    <div id="picture2-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture2-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture2-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 4th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img4.png" id="modal-image">
+                  <div class="picture4-numbers">
+                    <div id="picture4-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture4-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture4-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 5th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img5.png" id="modal-image">
+                  <div class="picture5-numbers">
+                    <div id="picture5-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture5-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture5-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture5-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage4.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Fourth Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 6th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img6.png" id="modal-image">
+                  <div class="picture6-numbers">
+                    <div id="picture6-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture6-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture6-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture6-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Fourth Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 7th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img7.png" id="modal-image">
+                  <div class="picture7-numbers">
+                    <div id="picture7-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture7-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture7-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 8th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img8.png" id="modal-image">
+                  <div class="picture8-numbers">
+                    <div id="picture8-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture8-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture8-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture8-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Fourth Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 9th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img9.png" id="modal-image">
+                  <div class="picture9-numbers">
+                    <div id="picture9-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture9-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture9-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 10th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img10.png" id="modal-image">
+                  <div class="picture10-numbers">
+                    <div id="picture10-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture10-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture10-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture10-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Fourth Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 11th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img11.png" id="modal-image">
+                  <div class="picture11-numbers">
+                    <div id="picture11-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture11-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture11-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture11-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/football.png" width="49px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Fourth Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage2.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-------------- 12th IMAGE ----------------->
+              <div class="mySlides">
+                <div class="modal-left">
+                  <img src="images/img12.png" id="modal-image">
+                  <div class="picture12-numbers">
+                    <div id="picture12-number-1">
+                      <h id="rounded-number">1</h>
+                    </div>
+                    <div id="picture12-number-2">
+                      <h id="rounded-number">2</h>
+                    </div>
+                    <div id="picture12-number-3">
+                      <h id="rounded-number">3</h>
+                    </div>
+                    <div id="picture12-number-4">
+                      <h id="rounded-number">4</h>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-right">
+                  <div class="products">
+                    <div class="first-product">
+                      <div id="product-number">
+                        <h id="rounded-number">1</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">First Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="second-product">
+                      <div id="product-number">
+                        <h id="rounded-number">2</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Second Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage3.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="third-product">
+                      <div id="product-number">
+                        <h id="rounded-number">3</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Third Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                    <div class="fourth-product">
+                      <div id="product-number">
+                        <h id="rounded-number">4</h>
+                      </div>
+                      <div id="product-details">
+                        <a href=""></a>
+                        <h4 class="modal-title" id="label-link">Fourth Product Title</h4>
+                        <h id="description">Random description</h>
+                        <br>
+                        <h4 class="modal-title" id="myModalLabel">Product Code: 645904011</h4>
+                      </div>
+                      <div id="product-image">
+                        <img id="image-size" src="images/smallimage1.png" width="38px" height="49px">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      </div>
+      <!-------------- FOOTER IMAGES ----------------->
+      <div class="dfk-footer">
+        <div id="footerS">
+          <img src="images/footerS.png" id="footerS">
+        </div>
+        <div id="footerTablet">
+          <img src="images/footerTablet.png" id="footerTablet">
+        </div>
+        <div id="footerLaptop">
+          <img src="images/footerLaptop.png" id="footerLaptop">
+        </div>
+        <div id="footerL">
+          <img src="images/footer.png" id="footerL">
+        </div>
+        <div id="footerXL">
+          <img src="images/footerXL.png" id="footerXL">
+        </div>
       </div>
     </main>
-    <div class="dfk-footer">
-      <div id="footerS">
-        <img src="images/footerS.png" id="footerS">
-      </div>
-      <div id="footerTablet">
-        <img src="images/footerTablet.png" id="footerTablet">
-      </div>
-      <div id="footerLaptop">
-        <img src="images/footerLaptop.png" id="footerLaptop">
-      </div>
-      <div id="footerL">
-        <img src="images/footer.png" id="footerL">
-      </div>
-      <div id="footerXL">
-        <img src="images/footerXL.png" id="footerXL">
-      </div>
-    </div>
     <!--------------- 4. JAVASCRIPT LINKS ---------------->
     <script type="text/javascript" src="js/upload.js"></script>
     <script type="text/javascript" src="js/generaljs.js"></script>
